@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JnR-Rl-bE6">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--首页-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHx-xg-0m7">
+                                <rect key="frame" x="20" y="175" width="560" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="调度本地通知">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushMsg" destination="BYZ-38-t0r" eventType="touchUpInside" id="i0s-bt-cEe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0r5-4N-4GI">
+                                <rect key="frame" x="20" y="257" width="560" height="30"/>
+                                <color key="backgroundColor" red="0.6309103197" green="0.012685619570000001" blue="0.90503570109999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="取消本地通知">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="unpushMsg" destination="BYZ-38-t0r" eventType="touchUpInside" id="zib-My-pV8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0r5-4N-4GI" firstAttribute="leading" secondItem="sHx-xg-0m7" secondAttribute="leading" id="OrF-8j-L7g"/>
+                            <constraint firstItem="sHx-xg-0m7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="155" id="V7Z-YQ-5MM"/>
+                            <constraint firstItem="sHx-xg-0m7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VUa-0k-T5q"/>
+                            <constraint firstItem="0r5-4N-4GI" firstAttribute="top" secondItem="sHx-xg-0m7" secondAttribute="bottom" constant="52" id="XWr-JM-jel"/>
+                            <constraint firstItem="0r5-4N-4GI" firstAttribute="trailing" secondItem="sHx-xg-0m7" secondAttribute="trailing" id="gnk-0e-x12"/>
+                            <constraint firstItem="sHx-xg-0m7" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="mL7-g5-j0C"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="首页" id="EhT-Nr-mhC"/>
+                    <connections>
+                        <segue destination="drj-sI-5yz" kind="push" identifier="homeToNews" id="kG2-tX-aS9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="382"/>
+        </scene>
+        <!--新闻首页-->
+        <scene sceneID="Wyd-OL-hZP">
+            <objects>
+                <viewController id="drj-sI-5yz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xIp-nN-Qbf"/>
+                        <viewControllerLayoutGuide type="bottom" id="OIg-aV-Dzq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8MW-ob-zkj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXt-7Y-7d0">
+                                <rect key="frame" x="190" y="193" width="221" height="213"/>
+                                <color key="backgroundColor" red="0.88416230370000004" green="0.02204754112" blue="0.042724881649999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="221" id="cBh-PO-L5a"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MXt-7Y-7d0" firstAttribute="centerY" secondItem="8MW-ob-zkj" secondAttribute="centerY" id="CNJ-So-w33"/>
+                            <constraint firstItem="MXt-7Y-7d0" firstAttribute="centerX" secondItem="8MW-ob-zkj" secondAttribute="centerX" id="Dj8-Er-W9Y"/>
+                            <constraint firstItem="MXt-7Y-7d0" firstAttribute="top" secondItem="xIp-nN-Qbf" secondAttribute="bottom" constant="129" id="cnj-t0-58a"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="新闻首页" id="1YH-X5-TRl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dGr-Cz-cR2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1672" y="382"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yeP-WX-vOk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JnR-Rl-bE6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kG9-Rw-OYo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1GU-1b-Vqt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ibl-UR-s4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184" y="382"/>
+        </scene>
+    </scenes>
+</document>
